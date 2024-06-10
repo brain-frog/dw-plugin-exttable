@@ -103,7 +103,7 @@ class syntax_plugin_exttab3 extends DokuWiki_Syntax_Plugin
     protected function close($tag, $pos, $match, $handler)
     {
       //$this->writeCall($tag,'',DOKU_LEXER_EXIT, $pos,$match,$handler);
-        $match = array(DOKU_LEXER_EXIT, $tag, $attr);
+        $match = array(DOKU_LEXER_EXIT, $tag);
         $handler->plugin($match, 'addPluginCall', $pos, $this->getPluginName());
     }
 
